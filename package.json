@@ -1,0 +1,76 @@
+{
+  "name": "codezap",
+  "displayName": "codezap",
+  "description": "codezap",
+  "version": "0.0.1",
+  "publisher": "jayMyong66",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.addCodeSnippet",
+    "onCommand:extension.sendAllSnippets",
+    "onCommand:extension.sendSingleSnippet"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.addCodeSnippet",
+        "title": "Add Code Snippet"
+      },
+      {
+        "command": "extension.sendAllSnippets",
+        "title": "Send All Code Snippets"
+      },
+      {
+        "command": "extension.sendSingleSnippet",
+        "title": "Send Single Code Snippet"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.addCodeSnippet",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "extension.sendSingleSnippet",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.91.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
