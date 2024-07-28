@@ -5,6 +5,10 @@
   "version": "0.0.1",
   "publisher": "jayMyong66",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jaymyong66/codezap-extention.git"
+  },
   "engines": {
     "vscode": "^1.91.0"
   },
