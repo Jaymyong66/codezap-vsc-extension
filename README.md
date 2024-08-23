@@ -1,21 +1,19 @@
-# CodeZap Extension
+# CodeZap 익스텐션
+이 익스텐션은 드래그로 선택한 소스코드 템플릿을 코드잽으로 업로드합니다.
 
-This extension allows you to send selected code snippets to an API for processing.
+### [`REALESE v0.0.1`](https://github.com/Jaymyong66/codezap-extension/releases/tag/v0.0.1)
 
-## Features
+## 기능
+- 소스코드 추가: 에디터에서 코드를 드래그로 선택한 후, 우클릭하고 "소스코드 추가"를 선택하세요. 이 소스코드는 로컬 저장소에 저장됩니다.
+- 모든 소스코드를 템플릿으로 전송: 모든 소스코드를 추가한 후, 커맨드 팔레트에서 "모든 소스코드를 템플릿으로 전송"을 선택하면, 코드잽으로 한번에 업로드됩니다.
+- 단일 소스코드 전송: 에디터에서 코드를 선택한 후, 우클릭하고 "단일 소스코드 전송"을 선택하면, 선택한 소스코드가 코드잽으로 한번에 업로드됩니다.
 
-- **Add Code Snippet**: Select code in the editor, right-click, and choose "Add Code Snippet". This will store the snippet locally.
-- **Send All Code Snippets**: Once you have added all the snippets, you can send them all at once to the API by using the command palette and selecting "Send All Code Snippets".
-- **Send Single Code Snippet**: Select code in the editor, right-click, and choose "Send Single Code Snippet". This will send the selected code snippet immediately to the API.
+## 설치
+1. [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/)에서 익스텐션을 설치하세요.
+2. Visual Studio Code에서 프로젝트를 엽니다.
 
-## Installation
-
-1. Install the extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/).
-2. Open your project in Visual Studio Code.
-
-## Usage
-
-1. Select the code you want to add as a snippet.
-2. Right-click and choose "Add Code Snippet" to add the snippet.
-3. After adding all snippets, open the command palette (`Ctrl+Shift+P`) and select "Send All Code Snippets" to send all snippets at once.
-4. Alternatively, you can select code and choose "Send Single Code Snippet" to send the snippet immediately.
+## 사용 방법
+1. 소스코드로 추가할 코드를 드래그하여 선택하세요.
+2. 우클릭하고 "소스코드 추가"를 선택하여 소스코드를 추가하세요.
+3. 업로드할 모든 소스코드를 추가한 후, 커맨드 팔레트(`Ctrl+Shift+P`)를 열고 "모든 소스코드를 템플릿으로 전송"을 선택하여 템플릿을 코드잽으로 업로드하세요.
+4. 또는, 코드를 드래그하여선택한 후 "단일 소스코드 전송"을 선택하여 소스코드를 템플릿으로 코드잽에 업로드할 수 있습니다
